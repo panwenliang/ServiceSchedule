@@ -6,9 +6,14 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.blankj.utilcode.util.TimeUtils
+import com.blankj.utilcode.util.Utils
 import com.panwenliang2008.serviceschedule.R
+import com.panwenliang2008.serviceschedule.R.id.tvTimeDate
+import com.panwenliang2008.serviceschedule.base.BaseFragment
+import kotlinx.android.synthetic.main.main_fragment.*
 
-class MainFragment : Fragment() {
+class MainFragment : BaseFragment() {
 
     companion object {
         fun newInstance() = MainFragment()
@@ -27,6 +32,8 @@ class MainFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         // TODO: Use the ViewModel
+
+        tvTimeDate.text = TimeUtils.getNowString()
     }
 
 }
