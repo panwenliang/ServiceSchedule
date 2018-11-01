@@ -1,5 +1,6 @@
 package com.panwenliang2008.serviceschedule.ui.main
 
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -33,7 +34,9 @@ class MainFragment : BaseFragment() {
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         // TODO: Use the ViewModel
 
-        tvTimeDate.text = TimeUtils.getNowString()
+        viewModel.currentTime.observe(this, Observer {
+            tvTimeDate.text = it
+        })
     }
 
 }
