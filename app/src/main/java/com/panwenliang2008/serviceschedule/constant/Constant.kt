@@ -1,4 +1,3 @@
 package com.panwenliang2008.serviceschedule.constant
 
-class Constant {
-}
+const val DATABASE_NAME = "schedule-db"
