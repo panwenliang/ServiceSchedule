@@ -36,7 +36,11 @@ class MainFragment : BaseFragment() {
 
         viewModel.currentTime.observe(this, Observer {
             tvTimeDate.text = it
+            btnStartWork.text = it
         })
-    }
 
+        btnStartWork.setOnClickListener {
+
+        }
+    }
 }
