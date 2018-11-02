@@ -10,10 +10,13 @@ import android.view.Menu
 import com.blankj.utilcode.util.TimeUtils
 import com.blankj.utilcode.util.TimeUtils.getNowString
 import com.blankj.utilcode.util.Utils
+import com.panwenliang2008.serviceschedule.data.local.db.Repository.ScheduleRepository
 import java.util.*
 import java.util.concurrent.TimeUnit
 
-class MainViewModel : ViewModel() {
+class MainViewModel internal constructor(
+    private val scheduleRepository: ScheduleRepository
+): ViewModel() {
     // TODO: Implement the ViewModel
 
     private val _currentTime : MutableLiveData<String> = MutableLiveData()
@@ -26,6 +29,7 @@ class MainViewModel : ViewModel() {
         override fun run() {
             _currentTime.value = TimeUtils.getNowString()
             timeHandler.postDelayed(this, TimeUnit.SECONDS.toMillis(1))
+
         }
     }
 

@@ -7,9 +7,11 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import com.panwenliang2008.serviceschedule.constant.DATABASE_NAME
+import com.panwenliang2008.serviceschedule.data.local.db.dao.ScheduleDao
 import com.panwenliang2008.serviceschedule.workers.SeedDatabaseWorker
 
 abstract class AppDatabase : RoomDatabase() {
+    abstract fun scheduleDao(): ScheduleDao
 
     companion object {
 

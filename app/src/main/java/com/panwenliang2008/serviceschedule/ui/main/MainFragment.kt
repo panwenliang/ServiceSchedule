@@ -12,6 +12,7 @@ import com.blankj.utilcode.util.Utils
 import com.panwenliang2008.serviceschedule.R
 import com.panwenliang2008.serviceschedule.R.id.tvTimeDate
 import com.panwenliang2008.serviceschedule.base.BaseFragment
+import com.panwenliang2008.serviceschedule.utilities.InjectorUtils
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : BaseFragment() {
