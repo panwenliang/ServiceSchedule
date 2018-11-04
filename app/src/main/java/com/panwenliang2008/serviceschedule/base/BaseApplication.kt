@@ -1,6 +1,7 @@
 package com.panwenliang2008.serviceschedule.base
 
 import android.app.Application
+import dagger.android.DaggerApplication
 
-open class BaseApplication : Application() {
+abstract class BaseApplication : Application() {
 }
