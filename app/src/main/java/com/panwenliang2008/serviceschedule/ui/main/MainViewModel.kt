@@ -14,9 +14,7 @@ import com.panwenliang2008.serviceschedule.data.local.db.Repository.ScheduleRepo
 import java.util.*
 import java.util.concurrent.TimeUnit
 
-class MainViewModel internal constructor(
-    private val scheduleRepository: ScheduleRepository
-): ViewModel() {
+class MainViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 
     private val _currentTime : MutableLiveData<String> = MutableLiveData()

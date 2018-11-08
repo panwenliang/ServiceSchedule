@@ -17,7 +17,7 @@ class MyApp : BaseApplication() {
 
     override fun onCreate() {
         super.onCreate()
-        DaggerAppComponent.builder().androidModule(AndroidModule(this)).build()
+        graph = DaggerAppComponent.builder().androidModule(AndroidModule(this)).build()
         graph.inject(this)
     }
 }

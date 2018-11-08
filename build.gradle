@@ -25,7 +25,7 @@ buildscript {
         firebaseVersion = '16.0.4'
         navigationVersion = '1.0.0-alpha07'
         ktxVersion = '1.0.0'
-        daggerVersion = '2.19'
+        daggerVersion = '2.16'
 
         utilcodeVersion = '1.21.2'
     }
