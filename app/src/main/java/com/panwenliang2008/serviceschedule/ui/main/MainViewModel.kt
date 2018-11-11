@@ -2,16 +2,9 @@ package com.panwenliang2008.serviceschedule.ui.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import android.content.Intent
 import android.os.Handler
-import android.view.Menu
 import com.blankj.utilcode.util.TimeUtils
-import com.blankj.utilcode.util.TimeUtils.getNowString
-import com.blankj.utilcode.util.Utils
-import com.panwenliang2008.serviceschedule.data.local.db.Repository.ScheduleRepository
-import java.util.*
 import java.util.concurrent.TimeUnit
 
 class MainViewModel : ViewModel() {
