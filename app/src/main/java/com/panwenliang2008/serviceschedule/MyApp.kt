@@ -1,23 +1,22 @@
 package com.panwenliang2008.serviceschedule
 
+import android.app.Activity
 import com.panwenliang2008.serviceschedule.base.BaseApplication
-import com.panwenliang2008.serviceschedule.di.AndroidModule
-import com.panwenliang2008.serviceschedule.di.AppComponent
-import com.panwenliang2008.serviceschedule.di.DaggerAppComponent
+import com.panwenliang2008.serviceschedule.di.AppInjector
 import dagger.android.AndroidInjector
-import dagger.android.DaggerApplication
-import dagger.android.support.DaggerAppCompatActivity
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasActivityInjector
+import javax.inject.Inject
 
-class MyApp : BaseApplication() {
-
-    companion object {
-        //platformStatic allow access it from java code
-        @JvmStatic lateinit var graph: AppComponent
-    }
+class MyApp : BaseApplication(), HasActivityInjector {
+    @Inject
+    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
 
     override fun onCreate() {
         super.onCreate()
-        graph = DaggerAppComponent.builder().androidModule(AndroidModule(this)).build()
-        graph.inject(this)
+
+        AppInjector.init(this)
     }
+
+    override fun activityInjector() = dispatchingAndroidInjector
 }

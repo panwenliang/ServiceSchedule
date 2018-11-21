@@ -1,11 +1,18 @@
 package com.panwenliang2008.serviceschedule.ui
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.panwenliang2008.serviceschedule.R
 import com.panwenliang2008.serviceschedule.base.BaseActivity
 import com.panwenliang2008.serviceschedule.ui.main.MainFragment
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.support.HasSupportFragmentInjector
+import javax.inject.Inject
 
-class MainActivity : BaseActivity() {
+class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
+    @Inject
+    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,5 +23,7 @@ class MainActivity : BaseActivity() {
                 .commitNow()
         }
     }
+
+    override fun supportFragmentInjector() = dispatchingAndroidInjector
 
 }
