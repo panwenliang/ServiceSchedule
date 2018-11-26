@@ -5,6 +5,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import io.reactivex.Flowable
 
 @Dao
 interface ScheduleDao {
@@ -14,4 +15,7 @@ interface ScheduleDao {
 
     @Query("SELECT * FROM schedule")
     fun loadAll(): List<ScheduleEntity>
+
+    @Query("SELECT * FROM schedule WHERE name = :name")
+    fun getScheduleByName(name: String): Flowable<ScheduleEntity>
 }
