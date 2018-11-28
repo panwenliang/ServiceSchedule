@@ -4,10 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.panwenliang2008.serviceschedule.R
-import com.panwenliang2008.serviceschedule.base.BaseActivity
 import com.panwenliang2008.serviceschedule.ui.main.MainFragment
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
+import kotlinx.android.synthetic.main.main_activity.*
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
@@ -21,6 +21,12 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.container, MainFragment.newInstance())
                 .commitNow()
+        }
+
+        bottomNavigationView.setOnNavigationItemSelectedListener {
+            when(it.itemId) {
+
+            }
         }
     }
 
