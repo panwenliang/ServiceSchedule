@@ -18,4 +18,7 @@ interface ScheduleDao {
 
     @Query("SELECT * FROM schedule WHERE name = :name")
     fun getScheduleByName(name: String): Flowable<ScheduleEntity>
+
+    @Query("SELECT * FROM schedule WHERE name = :date")
+    fun getScheduleByDate(date: String): Flowable<ScheduleEntity>
 }

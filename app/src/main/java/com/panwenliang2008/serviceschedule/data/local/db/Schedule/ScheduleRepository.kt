@@ -17,4 +17,8 @@ class ScheduleRepository @Inject constructor(private val scheduleDao: ScheduleDa
     fun getScheduleByName(userName: String): Flowable<ScheduleEntity> {
         return scheduleDao.getScheduleByName(userName)
     }
+
+    fun getScheduleByDate(date: String): Flowable<ScheduleEntity> {
+        return scheduleDao.getScheduleByDate(date)
+    }
 }

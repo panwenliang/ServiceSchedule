@@ -36,7 +36,7 @@ class MainViewModel
 
     fun insert(): Completable {
         return Completable.fromAction {
-            val scheduleEntity = ScheduleEntity(0, "testName", "", "", "")
+            val scheduleEntity = ScheduleEntity(0, "testName", "2018", "1", "1", "1")
             scheduleRepository.insertSchedule(listOf(scheduleEntity))
         }
     }

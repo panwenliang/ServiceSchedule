@@ -13,6 +13,10 @@ data class ScheduleEntity(
     @ColumnInfo(name = "name")
     val name: String,
 
+    // 日付
+    @ColumnInfo(name = "date")
+    val date: String,
+
     // 出社時間
     @ColumnInfo(name = "start_time")
     val startTime: String,

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ServiceSchedule</string>
+    
+    <!--FORM-->
+    <string name="form_date">日付</string>
+    <string name="form_start_time">出勤</string>
+    <string name="form_end_time">退勤</string>
+    <string name="form_rest_time">休憩</string>
+    <string name="form_work_time">就業時間</string>
+    <string name="form_note">備考</string>
 </resources>

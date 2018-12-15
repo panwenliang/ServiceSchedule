@@ -32,6 +32,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-alpha1'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-alpha1'
     kapt "androidx.room:room-compiler:$rootProject.roomVersion"
     implementation "android.arch.navigation:navigation-fragment-ktx:$rootProject.navigationVersion"
     implementation "android.arch.navigation:navigation-ui-ktx:$rootProject.navigationVersion"
@@ -63,6 +65,8 @@ dependencies {
     implementation "android.arch.persistence.room:runtime:1.1.1"
     implementation "android.arch.persistence.room:rxjava2:1.1.1"
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    // BaseRecyclerViewAdapterHelper
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.33'
 
     // Testing dependencies
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/FormItemTextView" />
+
+    <TextView
+        android:id="@+id/tvStartTime"
+        style="@style/FormItemTextView" />
+
+    <TextView
+        android:id="@+id/tvEndTime"
+        style="@style/FormItemTextView" />
+
+    <TextView
+        android:id="@+id/tvRestTime"
+        style="@style/FormItemTextView" />
+
+    <TextView
+        android:id="@+id/tvWorkTime"
+        style="@style/FormItemTextView" />
+
+    <TextView
+        android:id="@+id/tvNote"
+        style="@style/FormItemTextView" />
+
+</LinearLayout>
